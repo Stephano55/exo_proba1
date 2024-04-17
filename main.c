@@ -39,22 +39,31 @@ int main()
     int n, k;
     int question;
     double casPossible;
+    char choix = 'O';
     printf("\n\n\tOn doit former un comit» comprenant 3 math»maticiens et 2 phisiciens");
     printf("sur la base dÌun groupe plus large, form» de\n 7 math»maticiens et 5 phisiciens\n");
     printf("\nQuel est le nombre des cas possible pour former ce comit» si : \n");
     printf("\n1. Le comit» peut comprendre nÌimporte lequel des math»maticiens et des phisiciens \n");
     printf("\n2. Un phisicien particulier doit-Õtre membre du comit».\n");
     printf("\n3. Deux math»maticiens particuliers doivent Õtre exlus du comit».\n");
-    printf("a quelle question voulez vouz que le programme rÈponde? (1,2,3)");
-    scanf("%d",&question);
-    if (question == 1){
+    while (choix == 'O'){
+        printf("a quelle question voulez vouz que le programme rÈponde? (1,2,3)\n");
+        scanf("%d",&question);
+       if (question == 1){
         prQuestion();
-    }
-    else if (question == 2){
+        }
+        else if (question == 2){
         deuxQuestion();
-    }
-    else{
+        }
+        else if(question == 3){
         trQuestion();
+        }
+        else{
+           printf("il n'y a pas de %d em question dans le sujet", question);
+        }
+        printf("\nvoulez vouz que le programme rÈponde ‡ une autre question du sujet?(O/N)\n");
+        scanf(" %c", &choix);
     }
+
     return 0;
 }
