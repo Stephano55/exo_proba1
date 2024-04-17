@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1713382129 source:d:\étude\programme c\proba1\main.c
+	<stdio.h>
+	<stdlib.h>
+
